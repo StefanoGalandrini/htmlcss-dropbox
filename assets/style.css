@@ -57,7 +57,7 @@ a {
 }
 
 header {
-    min-height: 85vh;
+    min-height: 55rem;
     background-color: var(--light-blue);
 }
 
@@ -66,89 +66,46 @@ header {
 
 
 .header-menu-container {
-    height: 10vh;
+    min-height: 8vh;
+    width: 100vw;
     background-color: white;
+    display: flex;
 }
 
-.header-menu-container .menu-bar {
+.header-menu-container li {
+    margin: 0 2rem;
+}
+
+.menu-left-side,
+.menu-right-side {
     display: flex;
+    justify-content: flex-start;
+    flex: 0 0 50%;
+    justify-content: space-between;
     align-items: center;
-    
 }
 
-
-/* left part */
-
-.header-menu-container .logo {
+.menu-left-side {
     display: flex;
-    flex: 0 0 min-content;
-    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
 }
 
-.header-menu-container .left-menu {
+.menu-right-side {
     display: flex;
-    flex: 0 0 30%;
-    justify-content: space-around;
+    justify-content: flex-end;
+    white-space: nowrap;
+}
+
+.header-menu-container .left-menu,
+.header-menu-container .right-menu {
+    display: flex;
+    flex: 0 0 20%;
+    justify-content: space-between;
     align-items: center;
     padding-left: 2rem;
 }
 
-
-/* central part */
-
-.center-icons {
-    display: flex;
-    flex: 0 0 80%;
-    justify-content: center;
-    align-items: center;
-}
-
-.center-icons .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1rem;
-}
-
-.mirror {
-    transform: rotateY(180deg);
-}
-
-
-/* final part */
-
-.right-end {
-    display: flex;
-    height: 100%;
-    flex: 0 0 8%;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--grey-bkg);
-    color: red;
-    font-size: 0.75em;
-}
-
-.right-end button {
-    color: red;
-    padding: 2.2rem 0;
-}
-
-.right-end button:hover {
-    color: red;
-    border: 1px solid red;
-    transition: 1s;
-}
-
-
-.header-menu .menu-bar {
-    min-height: 20vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.header-menu-container button {
+    margin-right: 1rem;
 }
