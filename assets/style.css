@@ -337,7 +337,7 @@ section .partner-container {
     flex: 0 0 65%;
 }
 
-.partner-container h2 {
+.partner-container h3 {
     font-size: 1.5rem;
     margin-top: 4rem;
     margin-bottom: 1rem;
@@ -351,4 +351,41 @@ section .partner-container {
     background-color: white;
     border: 1px solid black;
     color: black;
+}
+
+
+/* SECTION 3 - ESEGUI PIÙ OPERAZIONI CON DROPBOX BUSINESS */
+
+section.multitask {
+    width: 50%;
+    margin: 9rem auto 3rem;
+}
+
+.multitask .cards-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--card-gap);
+}
+
+.multitask .card {
+    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
+}
+
+.multitask img {
+    max-width: 100%;
+}
+
+.multitask h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;;
+}
+
+.multitask h2 {
+    margin-top: 5rem;
+}
+
+.multitask a {
+    text-decoration: underline;
+    color: blue;
 }
