@@ -1,6 +1,6 @@
 /* RESET e FONT */
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
 
 *,
 *::before,
@@ -12,7 +12,7 @@
 
 :root {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: black;
 
     /* repeated custom properties */
@@ -27,15 +27,17 @@ ul {
 }
 
 h1 {
-    font-size: clamp(3rem, 20vw + 2rem, 5rem);
-    font-weight: 700;
-    line-height: 1em;
+    font-size: clamp(2.5rem, 15vw + 1rem, 5rem);
+    font-weight: 800;
+    line-height: 1.3em;
+    width: 65%;
+    margin-inline: auto;
 }
 
 p, span {
-    font-size: clamp(0.7rem, 10vw + 0.5rem, 0.5rem);
+    font-size: clamp(0.7rem, 10vw + 0.5rem, 1rem);
     font-weight: 300;
-    line-height: 0.5em;
+    line-height: 1.5em;
 }
 
 a {
@@ -57,23 +59,31 @@ a {
 }
 
 header {
-    min-height: 55rem;
+    min-height: 51rem;
     background-color: var(--light-blue);
+    padding-top:16vh;
 }
 
 
-/* TOP MENU */
+/* HEADER NAV */
 
 
 .header-menu-container {
     min-height: 8vh;
-    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: white;
     display: flex;
 }
 
 .header-menu-container li {
     margin: 0 2rem;
+}
+
+.header-menu-container button {
+    margin-right: 1rem;
 }
 
 .menu-left-side,
@@ -103,9 +113,12 @@ header {
     flex: 0 0 20%;
     justify-content: space-between;
     align-items: center;
-    padding-left: 2rem;
+    margin: 0 .5rem;
 }
 
-.header-menu-container button {
-    margin-right: 1rem;
+/* HEADER */
+
+.hero {
+    width: 65%;
+    margin-inline: auto;
 }
