@@ -1,6 +1,6 @@
 /* RESET e FONT */
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
 
 *,
 *::before,
@@ -146,5 +146,176 @@ margin-top: 5rem;
 .hero img {
     flex: 0 0 70%;
     width: 45%;
+    height: 45%;
     margin-bottom: -7vh;
+}
+
+
+/* SECTION 1 - TROVA IL PIANO CHE FA PER TE */
+
+.plans {
+    width: 55%;
+    margin: 9rem auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+}
+
+.plans form {
+    margin-bottom: 3.5rem;
+}
+
+.plans label {
+    margin-right: 2.5rem;
+    line-height: 1.5rem;
+    vertical-align: middle;
+}
+
+.plans .radio {
+    appearance: none;
+    background-color: #fff;
+    padding: .35rem .35rem;
+    color: var(--dropbox-blue);
+    border: 0.35rem solid var(--dropbox-blue);
+    border-radius: 50%;
+    line-height: 1.5rem;
+    vertical-align: middle;
+}
+
+.plans .cards-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--card-gap);
+    font-size: 0.95em;
+}
+
+
+.plans .card {
+    border: 1px solid #d0d0d0;
+    flex-direction: column;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
+}
+
+.plans .card .user-type {
+    padding: 0.3rem 0;
+    text-align: center;
+}
+
+.grey {
+    color: #d0d0d0;
+}
+
+.blue {
+    color: var(--dropbox-blue);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.plans .card .line {
+    border: 1px solid;
+    margin: 0 -2rem;
+}
+
+.plans .card .category {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.plans .card .price {
+    margin-top: 1rem;
+}
+
+.plans .card .time {
+    margin-top: 0.4rem;
+    margin-bottom: 3rem;
+    color: #666666;
+}
+
+.plans .card .user-number,
+.plans .card .space-amount,
+.plans .card .description,
+.plans .card .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+.plans .list i,
+.plans .list i,
+.plans .list i {
+    padding-top: .3em;
+}
+
+.plans .card .user-number,
+.plans .card .space-amount,
+.plans .card .feature {
+    margin-bottom: 1.5rem;
+}
+
+.plans .card .description,
+.plans .card .buy-now {
+    margin-bottom: 3rem;
+}
+
+.plans .card button {
+    margin-bottom: 2rem;
+}
+
+.plans .card a {
+    text-decoration: underline;
+    color: blue;
+    font-size: inherit;
+}
+
+.plans .card .short-line {
+    border: 1px solid;
+    margin-right: 50%;
+    margin-bottom: 3rem;
+}
+
+.plans .card .plan-type {
+    margin-bottom: 2rem;
+}
+
+.plans .horizontal {
+    border: 1px solid #d0d0d0;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    justify-content: center;
+}
+
+.plans .horizontal .enterprise-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.plans .horizontal .cta {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 70%;
+}
+
+.plans .horizontal button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+}
+
+.plans .horizontal .price {
+    margin-bottom: 3rem;
+}
+
+.plans .horizontal .enterprise-cta {
+    margin-bottom: 1.5rem;
 }
