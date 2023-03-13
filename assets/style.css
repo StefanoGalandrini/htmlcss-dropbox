@@ -48,6 +48,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
+
 .blue-button {
     background-color: var(--dropbox-blue);
     color: white;
@@ -121,4 +125,16 @@ header {
 .hero {
     width: 65%;
     margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    gap: var(--card-gap)
 }
+
+.hero img {
+    flex: 0 0 70%;
+    width: 45%;
+    margin-bottom: -20rem;
+}
+
