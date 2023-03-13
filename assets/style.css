@@ -52,7 +52,7 @@ img {
     display: block;
 }
 
-.blue-button {
+button {
     background-color: var(--dropbox-blue);
     color: white;
     border: 1px solid var(--dropbox-blue);
@@ -154,7 +154,7 @@ margin-top: 5rem;
 /* SECTION 1 - TROVA IL PIANO CHE FA PER TE */
 
 .plans {
-    width: 55%;
+    width: 50%;
     margin: 9rem auto;
 }
 
@@ -318,4 +318,37 @@ h2 {
 
 .plans .horizontal .enterprise-cta {
     margin-bottom: 1.5rem;
+}
+
+
+
+/* SECTION 2 - ENTRA IN CONTATTO CON UN PARTNER */
+
+
+section .partner-container {
+    width: 50%;
+    margin: 9rem auto;
+    display: flex;
+    gap: calc(var(--card-gap));
+}
+
+.partner-container img {
+    max-width: 65%;
+    flex: 0 0 65%;
+}
+
+.partner-container h2 {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.partner-container p {
+    margin-bottom: 2rem;
+}
+
+.partner-container button {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
 }
