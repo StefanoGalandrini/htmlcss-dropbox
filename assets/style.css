@@ -58,7 +58,7 @@ img {
     border: 1px solid var(--dropbox-blue);
     font-size: inherit;
     font-weight: 300;
-    padding: 0.45em 1.1em;
+    padding: 0.75rem 1.2rem;
     cursor: pointer;
 }
 
@@ -88,6 +88,7 @@ header {
 
 .header-menu-container button {
     margin-right: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .menu-left-side,
@@ -97,27 +98,26 @@ header {
     flex: 0 0 50%;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
 }
 
 .menu-left-side {
-    display: flex;
     justify-content: flex-start;
-    white-space: nowrap;
+    padding-left: 0.5rem;
 }
 
 .menu-right-side {
-    display: flex;
     justify-content: flex-end;
-    white-space: nowrap;
+    padding-right: 1.5rem;
 }
 
 .header-menu-container .left-menu,
 .header-menu-container .right-menu {
     display: flex;
-    flex: 0 0 20%;
+    flex: 0 0 30%;
     justify-content: space-between;
     align-items: center;
-    margin: 0 .5rem;
+    padding: 0 .5rem;
 }
 
 /* HEADER */
@@ -129,12 +129,22 @@ header {
     justify-content: space-between;
     align-content: flex-start;
     flex-wrap: nowrap;
-    gap: var(--card-gap)
+    gap: var(--card-gap);
+    margin-top: 3rem;
+}
+
+.hero-text button {
+    margin: 2rem 0;
+}
+
+.hero-text i {
+font-size: 3rem;
+font-weight: 800;
+margin-top: 5rem;
 }
 
 .hero img {
     flex: 0 0 70%;
     width: 45%;
-    margin-bottom: -20rem;
+    margin-bottom: -7vh;
 }
-
