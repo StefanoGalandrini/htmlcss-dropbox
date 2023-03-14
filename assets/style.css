@@ -420,6 +420,16 @@ section.multitask {
 section.clients {
     margin-top: 9rem;
     margin-bottom: 3rem;
+    --designit-dark: #a2d39b;
+    --designit-light: #d1e9cd;
+    --designit: #f5f5f5;
+    --asu: #61082b;
+    --uf: #0093ce;
+    --topps: #ff1c1c;
+    --bicycle: #d5001f;
+    --hearst: #b4d0e7;
+    --planet: #0d2481;
+    --channel: #ffd830;
 }
 
 .clients .text-content {
@@ -454,11 +464,10 @@ section.clients {
     margin-top: 9rem;
     width: calc(100% / 3);
     display: flex;
-    /* flex-wrap: wrap; */
     align-items: flex-start;
 }
 
-.clients .square-normal {
+.clients .square {
     flex: 0 0 50%;
     aspect-ratio: 1 / 1;
     border: 1px solid red;
@@ -469,4 +478,63 @@ section.clients {
     aspect-ratio: 1 / 1;
     border: 1px solid green;
 }
+
+/* square Designit small */
+.clients .container .designit {
+    background-color: var(--designit-dark);
+    border: 4mm solid var(--designit-light);
+    position: relative;
+}
+
+.clients .container .designit > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.35);
+}
+
+/* square Arizona State University */
+.clients .container .asu {
+    background-color: var(--asu);
+    position: relative;
+}
+
+.clients .container .asu > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+/* square University of Florida */
+.clients .container .uf {
+    background-color: var(--uf);
+    position: relative;
+}
+
+.clients .container .uf > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* square Topps */
+.clients .container .topps {
+    background-color: var(--topps);
+    position: relative;
+}
+
+.clients .container .topps > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+
 
