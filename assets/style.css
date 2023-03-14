@@ -99,6 +99,7 @@ header .menu-container {
     left: 0;
     right: 0;
     background-color: white;
+    z-index: 10;
 }
 
 header .menu-container li {
@@ -429,7 +430,7 @@ section.clients {
     --bicycle: #d5001f;
     --hearst: #b4d0e7;
     --planet: #0d2481;
-    --channel: #ffd830;
+    --clear: #ffd830;
 }
 
 .clients .text-content {
@@ -470,13 +471,11 @@ section.clients {
 .clients .square {
     flex: 0 0 50%;
     aspect-ratio: 1 / 1;
-    border: 1px solid red;
 }
 
 .clients .square-large {
     flex: 0 0 100%;
     aspect-ratio: 1 / 1;
-    border: 1px solid green;
 }
 
 /* square Designit small */
@@ -536,5 +535,107 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.4);
 }
 
+/* square Designit large */
+.clients .container .square-large {
+    background-color: var(--designit);
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
 
+.clients .container .square-large > img {
+    width: 51%;
+    margin-bottom: 2.5rem;
+}
 
+.clients .container .square-large > hr {
+    width: 20%;
+    border: 1px solid #d0d0d3;
+    margin-bottom: 2.5rem;
+}
+
+.clients .container .square-large > p {
+    margin-bottom: 3rem;
+}
+
+/* square bicycle */
+.clients .container .bicycle {
+    background-color: var(--bicycle);
+    position: relative;
+}
+
+.clients .container .bicycle > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+/* square hearst */
+.clients .container .hearst {
+    background-color: var(--hearst);
+    position: relative;
+}
+
+.clients .container .hearst > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+/* square Lonely Planet */
+.clients .container .planet {
+    background-color: var(--planet);
+    position: relative;
+}
+
+.clients .container .planet > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
+}
+
+/* square Clear Channel Outdoors */
+.clients .container .clear {
+    background-color: var(--clear);
+    position: relative;
+}
+
+.clients .container .clear > img {
+    filter: invert(100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* large bottom square full width */
+.clients .container .bottom-square {
+    width: 100%;
+    background-color: #b4d0e7;
+}
+
+.clients .bottom-square .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10rem;
+    padding: 7.8rem 0;  
+}
+
+.clients .bottom-square h2 {
+    margin: 0;
+    color: #61082b;
+}
+
+.clients .bottom-square button {
+    background-color: #ffffff;
+    color: var(--text-color);
+    border: 1px solid #ffffff;
+    padding: .75em 3.5em;
+}
