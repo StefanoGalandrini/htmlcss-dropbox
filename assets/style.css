@@ -15,11 +15,16 @@
     font-weight: 400;
     color: black;
 
-    /* repeated custom properties */
+/* repeated custom properties */
+    --text-color: #202020;
     --dropbox-blue: #0061ff;
     --light-blue: #b4d0e7;
     --dropdown-menu-color: #f2eee8;
     --card-gap: 2rem;
+}
+
+body {
+    padding-top: 10vh;
 }
 
 ul {
@@ -27,25 +32,29 @@ ul {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 15vw + 1rem, 5rem);
+    font-size: 5rem;
+    color: var(--text-color);
     font-weight: 800;
     line-height: 1.3em;
     width: 65%;
     margin-inline: auto;
 }
 
-p, span {
-    font-size: clamp(0.7rem, 10vw + 0.5rem, 1rem);
+p,
+span,
+a {
+    font-size: 1rem;
+    color: var(--text-color);
     font-weight: 300;
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 a {
-    font-size: clamp(0.5rem, 3vw + 0.5rem, 1rem);
-    font-weight: 300;
-    line-height: 0.5em;
-    color: black;
     text-decoration: none;
+}
+
+i {
+    color: var(--text-color);
 }
 
 img {
@@ -53,101 +62,115 @@ img {
 }
 
 button {
+    display: inline-block;
     background-color: var(--dropbox-blue);
     color: white;
     border: 1px solid var(--dropbox-blue);
     font-size: inherit;
     font-weight: 300;
-    padding: 0.75rem 1.2rem;
+    padding: 0.75em 1.2em;
     cursor: pointer;
+    white-space: nowrap;
 }
+
+.big {
+    width: 62%;
+    margin-inline: auto;
+}
+
+.small {
+    width: 50%;
+    margin-inline: auto;
+}
+
+
+/* HEADER and NAV */
 
 header {
-    min-height: 51rem;
+    min-height: 80%;
     background-color: var(--light-blue);
-    padding-top:16vh;
+
 }
 
-
-/* HEADER NAV */
-
-
-.header-menu-container {
-    min-height: 8vh;
+header .menu-container {
+    height: 10vh;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: white;
+}
+
+header .menu-container li {
+    padding: 0 1.2rem;
+}
+
+header .menu-container button {
+    padding: 0.5em 1.2em;
+}
+
+header .menu {
+    height: 100%;
+    padding-inline: 0.25rem;
+}
+
+header .menu ul {
+    height: 100%;
     display: flex;
-}
-
-.header-menu-container li {
-    margin: 0 2rem;
-}
-
-.header-menu-container button {
-    margin-right: 1rem;
-    padding: 0.5rem 1rem;
-}
-
-.menu-left-side,
-.menu-right-side {
-    display: flex;
-    justify-content: flex-start;
-    flex: 0 0 50%;
     justify-content: space-between;
-    align-items: center;
     white-space: nowrap;
 }
 
-.menu-left-side {
-    justify-content: flex-start;
-    padding-left: 0.5rem;
-}
-
-.menu-right-side {
-    justify-content: flex-end;
-    padding-right: 1.5rem;
-}
-
-.header-menu-container .left-menu,
-.header-menu-container .right-menu {
+header .menu ul > li {
     display: flex;
-    flex: 0 0 30%;
-    justify-content: space-between;
+}
+
+header .menu li > a {
+    display: flex;
     align-items: center;
-    padding: 0 .5rem;
 }
 
-/* HEADER */
+header .menu button {
+    align-self: center;
+}
 
-.hero {
-    width: 65%;
-    margin-inline: auto;
+header .menu .separator {
+    flex-grow: 1;
+}
+
+/* Hero */
+
+header .hero {
     display: flex;
     justify-content: space-between;
-    align-content: flex-start;
-    flex-wrap: nowrap;
-    gap: var(--card-gap);
-    margin-top: 3rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+header .hero .main-title {
+    flex: 0 0 100%;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+header .hero .hero-text {
+    flex: 0 0 30%;
+}
+
+header .hero img {
+    flex: 0 0 70%;
+    min-width: 0;
+    margin-bottom: -7vh;
 }
 
 .hero-text button {
     margin: 2rem 0;
-}
+}    
 
 .hero-text i {
-font-size: 3rem;
+font-size: 3rem;    
 font-weight: 800;
 margin-top: 5rem;
-}
-
-.hero img {
-    flex: 0 0 70%;
-    width: 45%;
-    height: 45%;
-    margin-bottom: -7vh;
 }
 
 
@@ -376,8 +399,17 @@ section.multitask {
     max-width: 100%;
 }
 
-.multitask h3 {
-    font-size: 1.5rem;
+
+
+/* SECTION 4 - CLIENTS */
+
+section.clients {
+    width: 50%;
+    margin: 9rem auto 3rem;
+}
+
+.clients .content h2 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;;
 }
 
@@ -385,7 +417,7 @@ section.multitask {
     margin-top: 5rem;
 }
 
-.multitask a {
+.clients .content a {
     text-decoration: underline;
     color: blue;
 }
