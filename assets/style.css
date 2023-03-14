@@ -21,10 +21,11 @@
     --light-blue: #b4d0e7;
     --dropdown-menu-color: #f2eee8;
     --card-gap: 2rem;
+    --top-nav-height: 8vh;
 }
 
 body {
-    padding-top: 10vh;
+    padding-top: var(--top-nav-height);
 }
 
 ul {
@@ -74,12 +75,12 @@ button {
 }
 
 .big {
-    width: 62%;
+    max-width: 65%;
     margin-inline: auto;
 }
 
 .small {
-    width: 53%;
+    max-width: 50%;
     margin-inline: auto;
 }
 
@@ -89,11 +90,11 @@ button {
 header {
     min-height: 80%;
     background-color: var(--light-blue);
-
+    padding-bottom: 1.5rem;
 }
 
 header .menu-container {
-    height: 10vh;
+    height: var(--top-nav-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -151,7 +152,7 @@ header .hero {
 header .hero .main-title {
     flex: 0 0 100%;
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 3.5rem;
 }
 
 header .hero .hero-text {
@@ -161,7 +162,7 @@ header .hero .hero-text {
 header .hero img {
     flex: 0 0 70%;
     min-width: 0;
-    margin-bottom: -7vh;
+    margin-bottom: -10vh;
 }
 
 .hero-text button {
@@ -171,7 +172,7 @@ header .hero img {
 .hero-text i {
 font-size: 3rem;    
 font-weight: 800;
-margin-top: 5rem;
+margin-top: 3rem;
 }
 
 
@@ -213,9 +214,8 @@ h2 {
     width: 100%;
     flex-wrap: wrap;
     gap: var(--card-gap);
-    font-size: 0.95em;
+    font-size: 0.9em;
 }
-
 
 .plans .card {
     border: 1px solid #d0d0d0;
@@ -362,9 +362,7 @@ section .partner-container {
 
 .partner-container .partner-text {
     flex: 0 0 calc(40% - 2 * var(--card-gap));
-    padding-right: 2.5rem;
 }
-
 
 .partner-container h3 {
     font-size: 1.5rem;
@@ -408,10 +406,6 @@ section.multitask {
 .multitask h3 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-}
-
-.multitask p {
-    padding-right: 1rem;
 }
 
 
@@ -668,4 +662,86 @@ section.faq {
     padding: 0;
     background-color: transparent;
     border: none;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 6rem 0 2rem;
+    padding-inline: 2rem;
+}
+
+
+/* FOOTER - nav section */
+
+.footer-nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 6rem;
+}
+
+.footer-nav-menu {
+    flex: 0 0 calc((100% - 4 * var(--card-gap)) / 5);
+    gap: var(--card-gap);
+    font-size: 1.25rem;
+}
+
+.footer-nav-menu p {
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.footer-nav-menu li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-nav-menu a {
+    color: #ffffff;
+    font-weight: normal;
+    list-style-type: none;
+}
+  
+
+/* FOOTER - Language section */
+
+.footer-language {
+    margin-bottom: 1rem;
+    color: #999999;
+}
+
+.footer-language hr {
+    width: 7rem;
+    margin-bottom: 3.5rem;
+}
+
+.footer-language .fa-earth-americas {
+    color: inherit;
+    padding-right: 0.5rem;
+}
+
+.footer-language span {
+    color: inherit;
+}
+
+.footer-language .fa-caret-up {
+    color: inherit;
+    padding-left: 0.2rem;
+}
+
+.footer-language button {
+    color: inherit;
+    vertical-align: bottom;
+    padding: 0;
+    background-color: transparent;
+    border: transparent;    
 }
