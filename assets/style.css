@@ -79,7 +79,7 @@ button {
 }
 
 .small {
-    width: 50%;
+    width: 53%;
     margin-inline: auto;
 }
 
@@ -177,8 +177,7 @@ margin-top: 5rem;
 /* SECTION 1 - TROVA IL PIANO CHE FA PER TE */
 
 .plans {
-    width: 50%;
-    margin: 9rem auto;
+    margin-top: 9rem;
 }
 
 h2 {
@@ -349,20 +348,26 @@ h2 {
 
 
 section .partner-container {
-    width: 50%;
-    margin: 9rem auto;
+    margin-top: 9rem;
     display: flex;
-    gap: calc(var(--card-gap));
+    align-items: flex-start;
+    gap: calc(2 * var(--card-gap));
 }
 
 .partner-container img {
-    max-width: 65%;
-    flex: 0 0 65%;
+    min-width: 0;
+    flex: 0 0 60%;
 }
+
+.partner-container .partner-text {
+    flex: 0 0 calc(40% - 2 * var(--card-gap));
+    padding-right: 2.5rem;
+}
+
 
 .partner-container h3 {
     font-size: 1.5rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -380,8 +385,8 @@ section .partner-container {
 /* SECTION 3 - ESEGUI PIÙ OPERAZIONI CON DROPBOX BUSINESS */
 
 section.multitask {
-    width: 50%;
-    margin: 9rem auto 3rem;
+    margin-top: 9rem;
+    margin-bottom: 3rem;
 }
 
 .multitask .cards-container {
@@ -399,25 +404,35 @@ section.multitask {
     max-width: 100%;
 }
 
+.multitask h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.multitask p {
+    padding-right: 1rem;
+}
+
 
 
 /* SECTION 4 - CLIENTS */
 
 section.clients {
-    width: 50%;
-    margin: 9rem auto 3rem;
+    margin-top: 9rem;
+    margin-bottom: 3rem;
 }
 
-.clients .content h2 {
+.clients .text-content {
+    padding-inline: 0 15%;
+}
+
+.clients .text-content .title {
     font-size: 2.5rem;
-    margin-bottom: 2rem;;
+    margin-bottom: 3.5rem;
+    text-align: left;
 }
 
-.multitask h2 {
-    margin-top: 5rem;
-}
-
-.clients .content a {
+.clients .text-content a {
     text-decoration: underline;
     color: blue;
 }
