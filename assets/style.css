@@ -80,6 +80,24 @@ button.blue:hover {
     opacity: 0.8;
 }
 
+button.white {
+    display: inline-block;
+    background-color: #ffffff;
+    color: var(--text-color);
+    border: 1px solid #ffffff;
+    font-size: inherit;
+    font-weight: 300;
+    padding: 0.75em 1.2em;
+    cursor: pointer;
+    white-space: nowrap;
+    opacity: 1;
+    transition: 250ms background-color ease-in-out;
+}
+
+button.white:hover {
+    background-color: var(--dropdown-menu-color);
+}
+
 .big {
     max-width: 65%;
     margin-inline: auto;
@@ -126,13 +144,19 @@ header .menu-container button {
 header .menu {
     height: 100%;
     padding-inline: 0.25rem;
-}
-
-header .menu ul {
-    height: 100%;
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
+}
+
+header .menu ul {
+    display: flex;
+    height: 100%;
+}
+
+header .menu ul .left,
+header .menu ul .right {
+    flex: 0 0 30%;
 }
 
 header .menu ul > li {
@@ -151,6 +175,11 @@ header .menu button {
 header .menu .separator {
     flex-grow: 1;
 }
+
+header .main-menu > .menu-item:hover {
+    background-color: var(--dropdown-menu-color);
+}
+
 
 /* Hero */
 
@@ -418,13 +447,20 @@ section.clients {
     --designit-dark: #a2d39b;
     --designit-light: #d1e9cd;
     --designit: #f5f5f5;
-    --asu: #61082b;
-    --uf: #0093ce;
-    --topps: #ff1c1c;
-    --bicycle: #d5001f;
-    --hearst: #b4d0e7;
-    --planet: #0d2481;
-    --clear: #ffd830;
+    --asu-dark: #61082b;
+    --asu-light: #aa6677;
+    --uf-dark: #0093ce;
+    --uf-light: #afddff;
+    --topps-dark: #ff1c1c;
+    --topps-light: #ff8d8d;
+    --bicycle-dark: #d5001f;
+    --bicycle-light: #fd6c81;
+    --hearst-dark: #b4d0e7;
+    --hearst-light: #e3f2fe;
+    --planet-dark: #0d2481;
+    --planet-light: #5588cc;
+    --clear-dark: #ffd830;
+    --clear-light:#ffeebb;
 }
 
 .clients .text-content {
@@ -473,11 +509,14 @@ section.clients {
     overflow-y: scroll;
 }
 
+
 /* square Designit small */
 .clients .container .designit {
     background-color: var(--designit-dark);
-    border: 4mm solid var(--designit-light);
     position: relative;
+    border: 1.1rem solid var(--designit-dark);
+    border-color: var(--designit-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .designit > img {
@@ -488,10 +527,17 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.35);
 }
 
+.clients .container .designit:hover {
+    border: 1.1rem solid var(--designit-light);
+}
+
 /* square Arizona State University */
 .clients .container .asu {
-    background-color: var(--asu);
+    background-color: var(--asu-dark);
     position: relative;
+    border: 1.1rem solid var(--asu-dark);
+    border-color: var(--asu-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .asu > img {
@@ -502,10 +548,17 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.4);
 }
 
+.clients .container .asu:hover {
+    border: 1.1rem solid var(--asu-light);
+}
+
 /* square University of Florida */
 .clients .container .uf {
-    background-color: var(--uf);
+    background-color: var(--uf-dark);
     position: relative;
+    border: 1.1rem solid var(--uf-dark);
+    border-color: var(--uf-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .uf > img {
@@ -516,10 +569,17 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.8);
 }
 
+.clients .container .uf:hover {
+    border: 1.1rem solid var(--uf-light);
+}
+
 /* square Topps */
 .clients .container .topps {
-    background-color: var(--topps);
+    background-color: var(--topps-dark);
     position: relative;
+    border: 1.1rem solid var(--topps-dark);
+    border-color: var(--topps-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .topps > img {
@@ -528,6 +588,10 @@ section.clients {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.4);
+}
+
+.clients .container .topps:hover {
+    border: 1.1rem solid var(--topps-light);
 }
 
 /* square Designit large */
@@ -555,8 +619,11 @@ section.clients {
 
 /* square bicycle */
 .clients .container .bicycle {
-    background-color: var(--bicycle);
+    background-color: var(--bicycle-dark);
     position: relative;
+    border: 1.1rem solid var(--bicycle-dark);
+    border-color: var(--bicycle-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .bicycle > img {
@@ -567,10 +634,17 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.4);
 }
 
+.clients .container .bicycle:hover {
+    border: 1.1rem solid var(--bicycle-light);
+}
+
 /* square hearst */
 .clients .container .hearst {
-    background-color: var(--hearst);
+    background-color: var(--hearst-dark);
     position: relative;
+    border: 1.1rem solid var(--hearst-dark);
+    border-color: var(--hearst-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .hearst > img {
@@ -581,10 +655,17 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.4);
 }
 
+.clients .container .hearst:hover {
+    border: 1.1rem solid var(--hearst-light);
+}
+
 /* square Lonely Planet */
 .clients .container .planet {
-    background-color: var(--planet);
+    background-color: var(--planet-dark);
     position: relative;
+    border: 1.1rem solid var(--planet-dark);
+    border-color: var(--planet-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .planet > img {
@@ -595,10 +676,17 @@ section.clients {
     transform: translate(-50%, -50%) scale(0.4);
 }
 
+.clients .container .planet:hover {
+    border: 1.1rem solid var(--planet-light);
+}
+
 /* square Clear Channel Outdoors */
 .clients .container .clear {
-    background-color: var(--clear);
+    background-color: var(--clear-dark);
     position: relative;
+    border: 1.1rem solid var(--clear-dark);
+    border-color: var(--clear-dark);
+    transition: 200ms border-color ease-in-out;
 }
 
 .clients .container .clear > img {
@@ -607,6 +695,10 @@ section.clients {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.clients .container .clear:hover {
+    border: 1.1rem solid var(--clear-light);
 }
 
 /* large bottom square full width */
