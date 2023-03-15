@@ -62,7 +62,7 @@ img {
     display: block;
 }
 
-button {
+button.blue {
     display: inline-block;
     background-color: var(--dropbox-blue);
     color: white;
@@ -72,6 +72,12 @@ button {
     padding: 0.75em 1.2em;
     cursor: pointer;
     white-space: nowrap;
+    opacity: 1;
+    transition: 250ms opacity ease-in-out;
+}
+
+button.blue:hover {
+    opacity: 0.8;
 }
 
 .big {
@@ -83,6 +89,11 @@ button {
     max-width: 50%;
     margin-inline: auto;
 }
+
+.bold {
+    font-weight: 700;
+}
+
 
 
 /* HEADER and NAV */
@@ -101,6 +112,7 @@ header .menu-container {
     right: 0;
     background-color: white;
     z-index: 10;
+    box-shadow: 1px 1px 3px#cccccc;
 }
 
 header .menu-container li {
@@ -179,7 +191,7 @@ margin-top: 3rem;
 /* SECTION 1 - TROVA IL PIANO CHE FA PER TE */
 
 .plans {
-    margin-top: 9rem;
+    padding-top: 9rem;
 }
 
 h2 {
@@ -211,7 +223,6 @@ h2 {
 
 .plans .cards-container {
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
     gap: var(--card-gap);
     font-size: 0.9em;
@@ -219,33 +230,17 @@ h2 {
 
 .plans .card {
     border: 1px solid #d0d0d0;
-    flex-direction: column;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
     flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
 }
 
 .plans .card .user-type {
     padding: 0.3rem 0;
     text-align: center;
+    border-bottom: 1px solid #d0d0d0;
 }
 
-.grey {
-    color: #d0d0d0;
-}
-
-.blue {
-    color: var(--dropbox-blue);
-}
-
-.bold {
-    font-weight: 700;
-}
-
-.plans .card .line {
-    border: 1px solid;
-    margin: 0 -2rem;
+.plans .card .user-features {
+    padding: 0 2rem;
 }
 
 .plans .card .category {
@@ -272,10 +267,13 @@ h2 {
     gap: .5rem;
 }
 
-.plans .list i,
-.plans .list i,
 .plans .list i {
     padding-top: .3em;
+}
+
+.plans .list .feature i {
+    padding-top: .3em;
+    color: var(--dropbox-blue);
 }
 
 .plans .card .user-number,
@@ -290,7 +288,15 @@ h2 {
 }
 
 .plans .card button {
+    display: block;
+    width: 100%;
     margin-bottom: 2rem;
+}
+
+.plans .card button > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: inherit;
 }
 
 .plans .card a {
@@ -300,7 +306,7 @@ h2 {
 }
 
 .plans .card .short-line {
-    border: 1px solid;
+    border: 1px solid #d0d0d0;
     margin-right: 50%;
     margin-bottom: 3rem;
 }
@@ -309,37 +315,31 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.plans .horizontal {
-    border: 1px solid #d0d0d0;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 100%;
-    justify-content: center;
+.plans .card.full-width {
+    flex: 1 0 100%;
 }
 
-.plans .horizontal .enterprise-cta {
+.plans .horizontal {
     display: flex;
+    padding: 0 2rem;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.plans .horizontal .cta {
-    display: flex;
-    flex-direction: column;
+.plans .horizontal .enterprise {
     flex: 0 0 70%;
 }
 
-.plans .horizontal button {
+.plans .horizontal .cta {
     margin-top: 1.5rem;
-    padding: 0.75rem 2rem;
+    flex: 0 0 calc(30% - var(--card-gap));
 }
 
 .plans .horizontal .price {
     margin-bottom: 3rem;
 }
 
-.plans .horizontal .enterprise-cta {
+.plans .horizontal .enterprise {
     margin-bottom: 1.5rem;
 }
 
@@ -400,7 +400,7 @@ section.multitask {
 }
 
 .multitask img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .multitask h3 {
@@ -470,6 +470,7 @@ section.clients {
 .clients .square-large {
     flex: 0 0 100%;
     aspect-ratio: 1 / 1;
+    overflow-y: scroll;
 }
 
 /* square Designit small */
