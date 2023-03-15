@@ -190,7 +190,7 @@ header .main-menu > .menu-item:hover {
  /* SUBMENU */
 
 header .submenu {
-    width: 150%;   
+    width: calc(100% + 5rem);   
     background-color: var(--dropdown-menu-color);
     flex-direction: column;
     position: absolute;
@@ -206,9 +206,9 @@ header .submenu li {
     padding: 0.5rem 0;
 }
 
-header .submenu li > a {
+header .submenu li > * {
     font-size: 0.95em;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1.25rem;
 }
 
 header .main-menu > .menu-item:hover .submenu {
@@ -216,15 +216,8 @@ header .main-menu > .menu-item:hover .submenu {
 }
 
 header .submenu .submenu-item:hover {
-    background-color: #e7e0d7;
-
+    background-color: #dcd0c0;
 }
-
-
-
-
-
-
 
 
 /* Hero */
