@@ -84,7 +84,7 @@ button.white {
     display: inline-block;
     background-color: #ffffff;
     color: var(--text-color);
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     font-size: inherit;
     font-weight: 300;
     padding: 0.75em 1.2em;
@@ -403,12 +403,6 @@ section .partner-container {
     margin-bottom: 2rem;
 }
 
-.partner-container button {
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-}
-
 
 /* SECTION 3 - ESEGUI PIÙ OPERAZIONI CON DROPBOX BUSINESS */
 
@@ -721,10 +715,8 @@ section.clients {
 }
 
 .clients .bottom-square button {
-    background-color: #ffffff;
-    color: var(--text-color);
-    border: 1px solid #ffffff;
     padding: .75em 3.5em;
+    border: transparent;
 }
 
 
