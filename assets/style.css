@@ -180,7 +180,7 @@ header .menu .separator {
 
 header .main-menu > .menu-item {
     color: inherit;
-    transition: 250ms background-color;
+    transition: 300ms background-color ease-in-out;
 }
 
 header .main-menu > .menu-item:hover {
@@ -189,18 +189,20 @@ header .main-menu > .menu-item:hover {
 
  /* SUBMENU */
 
-header .submenu {
-    width: calc(100% + 5rem);   
+header ul.submenu {
+    width: calc(100% + 5rem);
     background-color: var(--dropdown-menu-color);
     flex-direction: column;
     position: absolute;
     top: var(--top-nav-height);
     left: 0;
     opacity: 0;
-    transition: 250ms opacity;
+    visibility: hidden;
+    transition: 300ms opacity ease-in-out;
 }
 
 header .submenu li {
+    display: none;
     font-size: 0.85em;
     background-color: var(--dropdown-menu-color);
     padding: 0.5rem 0;
@@ -212,6 +214,7 @@ header .submenu li > * {
 }
 
 header .main-menu > .menu-item:hover .submenu {
+    visibility: visible;
     opacity: 1;
 }
 
@@ -767,8 +770,9 @@ section.faq {
 }
 
 .faq .question {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    position: relative;
     padding: 2rem 2.5rem 2rem 0;
     border-top: 1px solid #999999;
 }
@@ -786,6 +790,33 @@ section.faq {
     padding: 0;
     background-color: transparent;
     border: none;
+    line-height: 2rem;
+    position: absolute;
+    top: calc(50% - 1rem);
+    right: 2.5rem;
+}
+
+
+/* HOVER ON CHEVRON TO REVEAL HIDDEN TEXT */
+
+.faq #hidden {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-align: justify;
+}
+
+.faq button:hover #hidden {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    background-color: #000000;
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+    margin-inline: 2rem;
 }
 
 
