@@ -166,16 +166,13 @@ header .menu ul > li {
 }
 
 header .menu li > a {
+    height: 100%;
     display: flex;
     align-items: center;
 }
 
 header .menu button {
     align-self: center;
-}
-
-header .menu .separator {
-    flex-grow: 1;
 }
 
 header .main-menu > .menu-item {
@@ -189,10 +186,10 @@ header .main-menu > .menu-item:hover {
 
  /* SUBMENU */
 
-header ul.submenu {
-    width: calc(100% + 5rem);
+header .submenu {
+    min-width: 150%;
     background-color: var(--dropdown-menu-color);
-    flex-direction: column;
+    display: flex;
     position: absolute;
     top: var(--top-nav-height);
     left: 0;
@@ -201,16 +198,19 @@ header ul.submenu {
     transition: 300ms opacity ease-in-out;
 }
 
-header .submenu li {
-    display: none;
-    font-size: 0.85em;
+header .submenu .submenu-column {
+    width: 100%;
+    display: flex;
     background-color: var(--dropdown-menu-color);
-    padding: 0.5rem 0;
+    flex: 0 0 100%;
+    flex-direction: column;
+    white-space: normal;
 }
 
-header .submenu li > * {
-    font-size: 0.95em;
-    padding: 0.5rem 1.25rem;
+header .submenu .submenu-column * {
+    font-size: 0.75rem;
+    white-space: normal;
+    padding: 0.3rem 0.6rem;
 }
 
 header .main-menu > .menu-item:hover .submenu {
@@ -300,8 +300,8 @@ h2 {
 }
 
 .plans .card {
+    width: calc((100% - 2 * var(--card-gap)) / 3);
     border: 1px solid #d0d0d0;
-    flex: 0 0 calc((100% - 2 * var(--card-gap)) / 3);
 }
 
 .plans .card .user-type {
@@ -769,19 +769,6 @@ section.faq {
     margin-top: 9rem;
 }
 
-.faq .question {
-    /* display: flex; */
-    /* justify-content: space-between; */
-    position: relative;
-    padding: 2rem 2.5rem 2rem 0;
-    border-top: 1px solid #999999;
-}
-
-.faq .question:last-of-type {
-    border-bottom: 1px solid #999999;
-    margin-bottom: 9rem;
-}
-
 .faq i {
     font-size: .7em;
 }
@@ -796,27 +783,34 @@ section.faq {
     right: 2.5rem;
 }
 
+.faq .question {
+    position: relative;
+    padding: 2rem 2.5rem 2rem 0;
+    border-top: 1px solid #999999;
+}
+
+.faq .question:last-of-type {
+    border-bottom: 1px solid #999999;
+    margin-bottom: 9rem;
+}
+
 
 /* HOVER ON CHEVRON TO REVEAL HIDDEN TEXT */
 
-.faq #hidden {
-    visibility: hidden;
-    opacity: 0;
+.faq .hidden {
     display: none;
     font-size: 1rem;
     line-height: 1.25rem;
     text-align: justify;
 }
 
-.faq button:hover #hidden {
-    visibility: visible;
-    opacity: 1;
+.faq .question:hover .hidden {
     display: block;
-    background-color: #000000;
+    background-color: var(--text-color);
     border-radius: 10px;
     color: white;
     padding: 1rem;
-    margin-inline: 2rem;
+    margin: 2rem 5rem 0 0;
 }
 
 
